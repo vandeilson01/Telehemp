@@ -1,0 +1,18 @@
+@import url('../../public/fonts/Thunder-BoldLC.css');
+@import url('../../public/fonts/Thunder-SemiBoldLC.css');
+@import url('../../public/fonts/Thunder-ExtraLightLC.css');
+@import url('../../public/fonts/Thunder-LightLC.css');
+@import url('../../public/fonts/Thunder-LC.css');
+@import url('../../public/fonts/Thunder-ExtraBoldLC.css');
+@import url('../../public/fonts/Thunder-ThinLC.css');
+@import url('../../public/fonts/Thunder-BlackLC.css');
+@import url('../../public/fonts/Thunder-MediumLC.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+

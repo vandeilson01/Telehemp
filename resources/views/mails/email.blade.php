@@ -1,0 +1,1 @@
+O email {{$email}} deseja receber novidades. 
