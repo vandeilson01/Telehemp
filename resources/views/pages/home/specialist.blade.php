@@ -11,7 +11,7 @@
                         Especialistas
                     </h2>
 
-                    <p class="text-white mx-5  ">
+                    <p class="text-white mx-5 ">
                         Conheça os especialistas que<br/> fazem parte da nossa plataforma.
                     </p>
 

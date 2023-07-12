@@ -283,6 +283,7 @@ h2{
   .espl > div:first-child{
     order: 9999 !important;
     /* background-color: red; */
+    text-align: center;
   }
    
 }
