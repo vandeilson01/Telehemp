@@ -128,7 +128,7 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden lg:hidden">
         <div class="pt-2 pb-3 space-y-2">
             <x-responsive-nav-link href="{{url('home#quem-somos') }}" x-on:click="open = !open" :active="request()->routeIs('dashboard')">
-                Nobre Nós
+                Sobre Nós
             </x-responsive-nav-link>
 
             <!-- <x-responsive-nav-link href="{{url('home#funcionalidades') }}" x-on:click="open = !open"  :active="request()->routeIs('dashboard')">

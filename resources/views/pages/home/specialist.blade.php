@@ -6,7 +6,7 @@
 
             <div class="espl grid grid-cols-1 md:grid-cols-2  mx-auto px-4">
 
-                <div class="my-5 p-5">
+                <div class="my-5">
                     <h2 class="font-bold mx-5 text-6xl my-5 text-white">
                         Especialistas
                     </h2>
