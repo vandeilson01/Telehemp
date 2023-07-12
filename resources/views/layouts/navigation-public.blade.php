@@ -38,13 +38,13 @@
 
                     <div class=" sm:-my-px sm:ml-4 xl:flex relative rounded-3xl">
                         <a href="{{ url('pergunte-aos-especialistas')}}" :active="request()->routeIs('dashboard')" class="text-center inline-flex items-center justify-center p-2 py-2 text-sm font-medium leading-5 text-white border border-white rounded bg-transparent hover:bg-white hover:text-blueth focus:outline-none focus:border-indigo-700 transition w-42  duration-150 ease-in-out">
-                            Pergunta ao Especialista
+                            Pergunte aos Especialistas
                         </a>
                     </div>
 
                     <div class=" sm:-my-px sm:ml-4 xl:flex relative rounded-3xl">
                         <a href="https://api.whatsapp.com/send/?phone=%2B55554598054742&text=Ol%C3%A1%21+Tenho+interesse+em+fazer+parte+da+equipe+de+profissionais+TeleHemp%2C+poderia+me+auxiliar%3F&type=phone_number&app_absent=0 " :active="request()->routeIs('dashboard')" class="text-center inline-flex items-center justify-center p-2 py-2 text-sm font-medium leading-5 text-white border border-white rounded bg-transparent hover:bg-white hover:text-blueth focus:outline-none focus:border-indigo-700 transition w-42  duration-150 ease-in-out">
-                            Para Especialista
+                            Para Especialistas
                         </a>
                     </div>
  
@@ -144,7 +144,7 @@
             </x-responsive-nav-link>
 
             <x-responsive-nav-link href="{{ url('pergunte-aos-especialistas')}}" x-on:click="open = !open"  :active="request()->routeIs('dashboard')">
-                Pergunte ao Especialista
+                Pergunte aos Especialistas
             </x-responsive-nav-link>
 
             <x-responsive-nav-link href="https://api.whatsapp.com/send/?phone=%2B55554598054742&text=Ol%C3%A1%21+Tenho+interesse+em+fazer+parte+da+equipe+de+profissionais+TeleHemp%2C+poderia+me+auxiliar%3F&type=phone_number&app_absent=0 " x-on:click="open = !open"  :active="request()->routeIs('dashboard')">
