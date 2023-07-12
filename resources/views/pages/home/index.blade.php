@@ -629,12 +629,12 @@
                     speciality="Farmacêutica"
                     imagePath="{{ asset('images/especialista-amanda-farmaceutica.png') }}" />
 
-                <x-th.specialist-slider-item
+                <!-- <x-th.specialist-slider-item
                     class="lg:hidden"
                     x-show="activeSlide === 3"
                     professional="Flávio F."
                     speciality="Psiquiatra"
-                    imagePath="{{ asset('images/especialista-flavio-psquiatra.png') }}" />
+                    imagePath="{{ asset('images/especialista-flavio-psquiatra.png') }}" /> -->
 
                 <x-th.specialist-slider-item
                     class="hidden lg:block"
@@ -648,11 +648,11 @@
                     speciality="Farmacêutica"
                     imagePath="{{ asset('images/especialista-amanda-farmaceutica.png') }}" />
 
-                <x-th.specialist-slider-item
+                <!-- <x-th.specialist-slider-item
                     class="hidden lg:block"
                     professional="Flávio F."
                     speciality="Psiquiatra"
-                    imagePath="{{ asset('images/especialista-flavio-psquiatra.png') }}" />
+                    imagePath="{{ asset('images/especialista-flavio-psquiatra.png') }}" /> -->
 
                 <!-- Prev/Next Arrows -->
                 <div class="lg:hidden absolute inset-0 flex z-[100]">
