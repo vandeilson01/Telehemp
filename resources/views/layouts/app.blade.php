@@ -119,6 +119,18 @@
 
            
 
+            //animation
+
+            
+
+           
+            // Adiciona o valor retornado da boxTop a cada div
+            // $('#azul').html('<p>' + boxTop('#azul') + 'px </p>');
+            // $('#verde').html('<p>' + boxTop('#verde') + 'px </p>');
+            // $('#roxo').html('<p>' + boxTop('#roxo') + 'px </p>');
+
+
+
 
       </script>
     </body>

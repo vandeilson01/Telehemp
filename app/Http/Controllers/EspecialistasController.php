@@ -49,7 +49,7 @@ class EspecialistasController extends Controller
             if ($request->file('img')){
                 $file = $request->file('img');
                 $fileName = time().rand(1,99).'.'.$file->extension();  
-                $file->move(public_path('especialista/img'), $fileName);
+                $file->storage('especialista/img', $fileName);
                 $files[]['name'] = $fileName;
 
                 Especialistas::where('id', $add->id)->update([
@@ -61,7 +61,7 @@ class EspecialistasController extends Controller
             if ($request->file('icon')){
                 $file = $request->file('icon');
                 $fileName = time().rand(1,99).'.'.$file->extension();  
-                $file->move(public_path('especialista/icon'), $fileName);
+                $file->storage('especialista/icon', $fileName);
                 $filestwo[]['name'] = $fileName;
 
                 Especialistas::where('id', $add->id)->update([
@@ -111,7 +111,7 @@ class EspecialistasController extends Controller
             if ($request->file('img')){
                 $file = $request->file('img');
                 $fileName = time().rand(1,99).'.'.$file->extension();  
-                $file->move(public_path('especialista/img'), $fileName);
+                $file->storage('especialista/img', $fileName);
                 $files[]['name'] = $fileName;
 
                 Especialistas::where('id', $request->id)->update([
@@ -123,7 +123,7 @@ class EspecialistasController extends Controller
             if ($request->file('icon')){
                 $file = $request->file('icon');
                 $fileName = time().rand(1,99).'.'.$file->extension();  
-                $file->move(public_path('especialista/icon'), $fileName);
+                $file->storage('especialista/icon', $fileName);
                 $filestwo[]['name'] = $fileName;
 
                 Especialistas::where('id', $request->id)->update([

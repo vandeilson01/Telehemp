@@ -43,7 +43,7 @@ class CategoriasController extends Controller
             if ($request->file('img')){
                 $file = $request->file('img');
                 $fileName = time().rand(1,99).'.'.$file->extension();  
-                $file->move(public_path('categorias/img'), $fileName);
+                $file->storage('categorias/img',$fileName);
                 $files[]['name'] = $fileName;
 
                 Categorias::where('id', $add->id)->update([
@@ -91,7 +91,7 @@ class CategoriasController extends Controller
         if ($request->file('img')){
             $file = $request->file('img');
             $fileName = time().rand(1,99).'.'.$file->extension();  
-            $file->move(public_path('categorias/img'), $fileName);
+            $file->storage('categorias/img',$fileName);
             $files[]['name'] = $fileName;
 
             Categorias::where('id', $request->id)->update([

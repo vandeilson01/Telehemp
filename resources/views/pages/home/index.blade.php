@@ -3,7 +3,7 @@
         <div id="header-background" class="w-full rounded-[36px] bg-gradient-to-br from-blueth via-blueth to-greenth p-8">
             @include('layouts.navigation-public')
 
-            <div id="leading" class="flex flex-col mt-4 gap-4 text-white items-center text-center">
+            <div id="leading" class=" flex flex-col mt-4 gap-4 text-white items-center text-center">
                 <h1 class="font-thunder font-bold text-5xl lg:text-7xl">Sua ponte para a<br /> saúde canábica</h1>
                 <p class="text-xl lg:text-md">Para pacientes. Para médicos. Para <strong>todos.</strong></p>
                 <a href="https://wa.me/+55554598054742?text=Ol%C3%A1!%20Tenho%20interesse%20em%20fazer%20uma%20consulta%20pela%20TeleHemp,%20poderia%20me%20auxiliar?" target="_blank" class="bg-gray-300 rounded-xl shadow-md py-2 px-6 text-blueth font-bold z-50">Saiba mais</a>
@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="lg:grid lg:grid-flow-col lg:gap-4">
-                    <p class="lg:max-w-[496px] text-lg lg:font-thunder-light lg:text-4xl text-gray-700">Bem-vindo à TeleHemp, a primeira plataforma multidisciplinar de telessaúde canábica do Brasil! Somos um time apaixonado por inovação e comprometido com a saúde e bem-estar dos nossos usuários. Nossa missão é conectar pacientes a especialistas altamente qualificados no campo da cannabis medicinal, facilitando o acesso a tratamentos eficazes e seguros para diversas condições, como ansiedade, depressão, Alzheimer, epilepsias, entre outras.</p>
+                    <p id="leadingtwo" class="lg:max-w-[496px] text-lg lg:font-thunder-light lg:text-4xl text-gray-700">Bem-vindo à TeleHemp, a primeira plataforma multidisciplinar de telessaúde canábica do Brasil! Somos um time apaixonado por inovação e comprometido com a saúde e bem-estar dos nossos usuários. Nossa missão é conectar pacientes a especialistas altamente qualificados no campo da cannabis medicinal, facilitando o acesso a tratamentos eficazes e seguros para diversas condições, como ansiedade, depressão, Alzheimer, epilepsias, entre outras.</p>
                     <img src="{{ asset('images/telehemp-canabis-leaf-desktop.png') }}" alt="Canabis Leaf" class="hidden lg:flex bg-[#E5E5E5] lg:w-auto">
                 </div>
             </div>
