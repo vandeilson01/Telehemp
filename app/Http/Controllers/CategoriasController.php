@@ -45,7 +45,7 @@ class CategoriasController extends Controller
             if ($request->file('img')){
                 $file = $request->file('img');
                 $fileName = time().rand(1,99).'.'.$file->extension();  
-                Storage::disk('pubic')->put('categorias/img/'.$fileName, File::get($file));
+                Storage::disk('public')->put('categorias/img/'.$fileName, File::get($file));
 
 
                 // dd($file);
