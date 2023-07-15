@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Categorias;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+
 
 class CategoriasController extends Controller
 {
@@ -31,20 +34,25 @@ class CategoriasController extends Controller
         // $request->validate([
         //     'name' => 'required',
         //     'detail' => 'required',
-        // ]);
-
+        // ]); 
         
         $add = Categorias::create([
             'name' => $request->input('name'),
         ]);
-
+        
         if($add){
             $files = [];
             if ($request->file('img')){
                 $file = $request->file('img');
                 $fileName = time().rand(1,99).'.'.$file->extension();  
-                $file->move(public_path('categorias/img'), $fileName);
+                Storage::disk('local')->put('categorias/img/'.$fileName, File::get($file));
+
+
+                // dd($file);
+                 
                 $files[]['name'] = $fileName;
+
+
 
                 Categorias::where('id', $add->id)->update([
                     'img' => $fileName,
@@ -91,7 +99,7 @@ class CategoriasController extends Controller
         if ($request->file('img')){
             $file = $request->file('img');
             $fileName = time().rand(1,99).'.'.$file->extension();  
-            $file->move(public_path('categorias/img'), $fileName);
+            Storage::disk('local')->put('categorias/img/'.$fileName, 'File');
             $files[]['name'] = $fileName;
 
             Categorias::where('id', $request->id)->update([

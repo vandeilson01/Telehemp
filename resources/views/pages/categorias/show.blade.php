@@ -1,3 +1,9 @@
+@php 
+
+  use Illuminate\Support\Facades\Storage;
+
+@endphp
+
 <x-app-layout>
  
     <x-slot name="header">
@@ -55,7 +61,7 @@
                                         <div>
                                             <label for="img" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Imagem</label>
                                             @if(!empty($categorias->img))
-                                              <img class="w-full h-full mt-2" src="{{url('categorias/img/'.$categorias->img)}}" />
+                                              <img class="w-full h-full mt-2" src="{{ url('/categorias/img/'.$categorias->img)}}" />
                                             @else
                                               <p>Adicione uma imagem</p>
                                             @endif

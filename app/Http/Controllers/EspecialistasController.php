@@ -7,6 +7,10 @@ use App\Models\Especialistas;
 
 use Illuminate\Support\Facades\Hash;
 
+use Illuminate\Support\Facades\Storage;
+ 
+
+
 class EspecialistasController extends Controller
 {
     public function index()
@@ -49,7 +53,7 @@ class EspecialistasController extends Controller
             if ($request->file('img')){
                 $file = $request->file('img');
                 $fileName = time().rand(1,99).'.'.$file->extension();  
-                $file->move(public_path('especialista/img'), $fileName);
+                Storage::disk('local')->put('especialista/img/'.$fileName, 'Files');
                 $files[]['name'] = $fileName;
 
                 Especialistas::where('id', $add->id)->update([
@@ -61,7 +65,8 @@ class EspecialistasController extends Controller
             if ($request->file('icon')){
                 $file = $request->file('icon');
                 $fileName = time().rand(1,99).'.'.$file->extension();  
-                $file->move(public_path('especialista/icon'), $fileName);
+                
+                Storage::disk('local')->put('especialista/icon'.$fileName, 'Files');
                 $filestwo[]['name'] = $fileName;
 
                 Especialistas::where('id', $add->id)->update([
@@ -111,7 +116,7 @@ class EspecialistasController extends Controller
             if ($request->file('img')){
                 $file = $request->file('img');
                 $fileName = time().rand(1,99).'.'.$file->extension();  
-                $file->move(public_path('especialista/img'), $fileName);
+                Storage::disk('local')->put('especialista/img'.$fileName, 'Files');
                 $files[]['name'] = $fileName;
 
                 Especialistas::where('id', $request->id)->update([
@@ -123,7 +128,7 @@ class EspecialistasController extends Controller
             if ($request->file('icon')){
                 $file = $request->file('icon');
                 $fileName = time().rand(1,99).'.'.$file->extension();  
-                $file->move(public_path('especialista/icon'), $fileName);
+                Storage::disk('local')->put('especialista/icon'.$fileName, 'Files');
                 $filestwo[]['name'] = $fileName;
 
                 Especialistas::where('id', $request->id)->update([
