@@ -65,4 +65,13 @@ Route::get('/testroute', function() {
 });
  
 
+// Route::post('/upload', function () {
+//     request()->file('file')->store(
+//         'categorias',
+//         'do',
+//     );
+
+//     return back();
+// });
+
 require __DIR__.'/auth.php';

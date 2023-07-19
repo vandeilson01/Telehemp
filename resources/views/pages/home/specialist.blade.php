@@ -7,11 +7,11 @@
             <div class="espl grid grid-cols-1 md:grid-cols-2  mx-auto px-4">
 
                 <div class="my-5">
-                    <h2 class="font-bold mx-5 text-6xl my-5 text-white">
+                    <h2 data-aos="fade-right" data-aos-duration="1000"    class="font-bold mx-5 text-6xl my-5 text-white">
                         Especialistas
                     </h2>
 
-                    <p class="text-white mx-5 ">
+                    <p data-aos="fade-right" data-aos-duration="1500"   class="text-white mx-5 ">
                         Conheça os especialistas que<br/> fazem parte da nossa plataforma.
                     </p>
 
@@ -33,7 +33,7 @@
 
          <button id="dropdownUsersButton" data-dropdown-toggle="dropdownUsers" data-dropdown-placement="bottom" class="text-center lg:hidden mt-2 h-12 rounded-3xl text-white bg-blueth hover:bg-blueth focus:outline-none focus:ring-blueth font-medium text-sm px-4 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Categorias <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button> -->
   
-         <x-th.select-categorias  />
+         <x-th.select-categorias   />
           
          <div id="dropdownUsers" class="z-10 hidden bg-[#E5E5E5] w-auto rounded-lg shadow dark:bg-gray-700">
              <ul class="text-sm font-medium text-gray-900 border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
@@ -97,7 +97,7 @@
          </div>
         </div>
 
-        <div class="all-esp grid grid-cols-1 content-center md:mx-0 md:grid-cols-2 ">
+        <div data-aos="fade-up"  class="all-esp grid grid-cols-1 content-center md:mx-0 md:grid-cols-2 ">
             <x-th.specitwo />
         </div>
 
@@ -105,7 +105,7 @@
        
         <div class="grid grid-cols-1 content-center md:grid-cols-2 ">
 
-            <div class="my-10 m-1">
+            <div data-aos="fade-up" data-aos-duration="1000"  class="my-10 m-1">
                 <hr/>
                 <div class="mt-8 p-2 grid grid-cols-2 rounded-3xl border-2 border-blueth space-y-8 items-center align-center">
                     <div class="p-3 mb-4">
@@ -120,7 +120,7 @@
                 </div>
             </div>
             
-            <div class="my-10 m-1">
+            <div data-aos="fade-up" data-aos-duration="1500" class="my-10 m-1">
                 <hr/>
                 <div class="mt-8 p-2 grid grid-cols-2 rounded-3xl border-2 border-blueth space-y-8 items-center align-center">
                     <div class="p-1 mb-4 text-start">

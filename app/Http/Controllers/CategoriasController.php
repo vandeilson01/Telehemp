@@ -42,18 +42,28 @@ class CategoriasController extends Controller
         
         if($add){
             $files = [];
+
+            // dd(request()->file('img'));
+
+
             if ($request->file('img')){
                 $file = $request->file('img');
-                $fileName = time().rand(1,99).'.'.$file->extension();  
-                Storage::disk('public')->put('categorias/img/'.$fileName, File::get($file));
 
+                $fileName = $file->hashName(); 
 
+                // $file->store(
+                //     'categorias',
+                //     'do',
+                //     'public'
+                // );
+
+                // $fileName = $file->getClientOriginalName().'.'.$file->extension();  
+                Storage::disk('do')->put('categorias/'.$fileName, file_get_contents($file), 'public');
+ 
                 // dd($file);
                  
                 $files[]['name'] = $fileName;
-
-
-
+ 
                 Categorias::where('id', $add->id)->update([
                     'img' => $fileName,
                 ]);
@@ -98,8 +108,20 @@ class CategoriasController extends Controller
         $files = [];
         if ($request->file('img')){
             $file = $request->file('img');
-            $fileName = time().rand(1,99).'.'.$file->extension();  
-            Storage::disk('public')->put('categorias/img/'.$fileName, 'File');
+
+            $fileName = $file->hashName(); 
+
+            // $file->store(
+            //     'categorias',
+            //     'do',
+            //     'public'
+            // );
+
+            // $fileName = $file->getClientOriginalName().'.'.$file->extension();  
+            Storage::disk('do')->put('categorias/'.$fileName, file_get_contents($file), 'public');
+
+            // dd($file);
+             
             $files[]['name'] = $fileName;
 
             Categorias::where('id', $request->id)->update([

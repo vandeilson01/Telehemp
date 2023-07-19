@@ -97,7 +97,7 @@
                                             <label for="img" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Imagem</label>
                                             <input type="file" value="{{$especialistas->img}}" name="img" id="img" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                             @if(!empty($especialistas->img))
-                                              <img class="w-full h-86 mt-2" src="{{url('especialista/img/'.$especialistas->img)}}" />
+                                              <img class="w-full h-86 mt-2" src="https://telehempphotoscategoria.sfo3.cdn.digitaloceanspaces.com/especialistas/img/{{$especialistas->img}}" />
                                             @else
                                               <p>Adicione uma imagem</p>
                                             @endif
@@ -107,7 +107,7 @@
                                             <label for="icon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Icon</label>
                                             <input type="file" value="{{$especialistas->icon}}" name="icon" id="icon" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                             @if(!empty($especialistas->icon))
-                                              <img class="w-16 h-16 mt-2"  src="{{url('especialista/icon/'.$especialistas->icon)}}" />
+                                              <img class="w-16 h-16 mt-2"  src="https://telehempphotoscategoria.sfo3.cdn.digitaloceanspaces.com/especialistas/icon/{{$especialistas->icon}}" />
                                             @else
                                               <p>Adicione uma imagem</p>
                                             @endif

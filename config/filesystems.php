@@ -56,6 +56,20 @@ return [
             'throw' => false,
         ],
 
+
+        'do' => [
+            'driver' => 's3',
+            'key' => env('DO_KEY'),
+            'secret' => env('DO_SECRET'),
+            'region' => env('DO_REGION'),
+            'bucket' => env('DO_BUCKET'),
+            'endpoint' => env('DO_ENDPOINT'),
+            // 'cdn_endpoint' => env('DO_CDN_ENDPOINT'),
+            'use_path_style_endpoint' => env('DO_USE_PATH_STYLE_ENDPOINT'),
+            'acl' => 'public-read',
+            'throw' => false,
+        ],
+
     ],
 
     /*
@@ -69,9 +83,9 @@ return [
     |
     */
 
-    'links' => [
-        public_path('storage') => storage_path('app/public'),
-        public_path('images') => storage_path('app/images'),
-    ],
+    // 'links' => [
+    //     public_path('storage') => storage_path('app/public'),
+    //     public_path('images') => storage_path('app/images'),
+    // ],
 
 ];

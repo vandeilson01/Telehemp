@@ -71,7 +71,7 @@
                                             <label for="img" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Imagem</label>
                                             <input type="file" value="{{$categorias->img}}" name="img" id="img" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                             @if(!empty($categorias->img))
-                                              <img class="w-full h-full mt-2" src="{{url('categorias/img/'.$categorias->img)}}" />
+                                              <img class="w-full h-full mt-2" src="https://telehempphotoscategoria.sfo3.cdn.digitaloceanspaces.com/categorias/{{$categorias->img}}" />
                                             @else
                                               <p>Adicione uma imagem</p>
                                             @endif

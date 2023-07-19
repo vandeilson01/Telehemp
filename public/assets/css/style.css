@@ -526,37 +526,10 @@ label[for="jj-1"]::before {
   margin-top: -8px;
 } */
 
-
-/* animacoes */
-
-#leading{
-  transition: 0.5s all;
-  transform: translate(0%, -1000px);
-}
-.top_text_ini{
-  opacity: 1;
-  
-	transform: translate(0px, 0px) !important;
-  /* background-color: red; */
-  /* margin-top: -10000px; */
-}
-
-#leadingtwo{
-  transition: 0.5s all;
-  transform: translate(-2000px, 0%);
-}
-.left_text_ini{
-  opacity: 1;
-  
-	transform: translate(0px, 0px) !important;
-  /* background-color: red; */
-  /* margin-top: -10000px; */
-}
-
+ 
 
 /* termos */
-
-
+ 
 
 .wrapper {
   position: fixed;
@@ -569,6 +542,8 @@ label[for="jj-1"]::before {
   padding: 15px 25px 22px;
   transition: right 0.3s ease;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 2em 0 2em 0;
+  border: 2px solid black;
 }
 .wrapper.show {
   right: 20px;
@@ -579,19 +554,19 @@ label[for="jj-1"]::before {
   column-gap: 15px;
 }
 .wrapper header i {
-  color: #4070f4;
+  color: #000000;
   font-size: 32px;
 }
 .wrapper header h2 {
-  color: #4070f4;
-  font-weight: 500;
+  color: #000000;
+  /* font-weight: 500; */
 }
 .wrapper .data {
   margin-top: 16px;
 }
 .wrapper .data p {
   color: #333;
-  font-size: 16px;
+  font-size: 13px;
 }
 .data p a {
   color: #4070f4;
@@ -609,23 +584,50 @@ label[for="jj-1"]::before {
 }
 .buttons .button {
   border: none;
-  color: #fff;
+  color: #000000;
   padding: 8px 0;
-  border-radius: 4px;
-  background: #4070f4;
   cursor: pointer;
   width: calc(100% / 2 - 10px);
   transition: all 0.2s ease;
+  border-radius: 1.6em 0 1.6em 0;
+  border: 2px solid black;
 }
 .buttons #acceptBtn:hover {
-  background-color: #034bf1;
-}
-#declineBtn {
-  border: 2px solid #4070f4;
-  background-color: #fff;
-  color: #4070f4;
+  background-color: #2A2E80;
+  border: 2px solid #2A2E80;
+  color: #FFFFFF;
 }
 #declineBtn:hover {
-  background-color: #4070f4;
-  color: #fff;
+  background-color: #000000;
+  color: #d3d3d3;
+}
+
+.removeone{
+  display: none;
+}
+
+.addone{
+  display: fixed;
+}
+
+/*  */
+
+
+.float-wha{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.float-wha .my-float{
+	margin-top:16px;
 }

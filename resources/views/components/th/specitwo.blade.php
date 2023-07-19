@@ -10,9 +10,9 @@
     @foreach(Especialistas::all() as $row)
         <div class="especialita {{$row->name}} {{$row->surname}} {{str_replace($comAcentos, $semAcentos, $row->especialit)}} m-1 mt-5  grid grid-cols-2 rounded-3xl border-t-2 border-l-2 border-r-2 border-blueth">
             <div class="esp-imagem my-5 mx-5 overflow-hidden">
-                <img class="bef" src="{{url('especialista/icon/'.$row->icon)}}">
+                <img class="bef" src="https://telehempphotoscategoria.sfo3.cdn.digitaloceanspaces.com/especialistas/icon/{{$row->icon}}">
                 <div class="rounded-[10px] border border-blueth">
-                    <img src="{{url('especialista/img/'.$row->img)}}"/>
+                    <img src="https://telehempphotoscategoria.sfo3.cdn.digitaloceanspaces.com/especialistas/img/{{$row->img}}"/>
                 </div>
             </div>
             <div class="esp-dados my-3 text-start">

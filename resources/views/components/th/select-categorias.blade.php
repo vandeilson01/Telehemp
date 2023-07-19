@@ -36,7 +36,7 @@
         var item = "";
         item +='<span class="flex">';
         if(state.text != 'Categorias'){
-            item +='<img src="categorias/img/'+optimage+'" class="img-flag pr-1 '+state.text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")+' " /> ';
+            item +='<img src="https://telehempphotoscategoria.sfo3.cdn.digitaloceanspaces.com/categorias/'+optimage+'" class="img-flag pr-1 '+state.text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")+' " /> ';
         } 
         item += state.text + '</span>';
             

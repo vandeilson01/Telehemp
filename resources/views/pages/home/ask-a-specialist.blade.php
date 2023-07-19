@@ -7,15 +7,15 @@
 
                 <div class="my-5">
 
-                    <h2 class="font-bold p-3 text-4xl text-white">
+                    <h2  data-aos="fade-right" data-aos-duration="1000" class="font-bold p-3 text-4xl text-white">
                         Pergunte aos Especialistas
                     </h2>
 
-                    <p class="text-white p-3 text-2xl">
+                    <p  data-aos="fade-right" data-aos-duration="1500" class="text-white p-3 text-2xl">
                         Tire suas dúvidas sobre saúde com os melhores especialistas.
                     </p>
 
-                    <ul class="text-lg p-3">
+                    <ul  data-aos="fade-right" data-aos-duration="2000" class="text-lg p-3">
                         <li class="flex items-start text-left justify-start gap-2 text-white">
                             <x-th.icon-canabis class="fill-greenth h-4 mt-2"/>
                             <p>Você receberá várias respostas</p>
@@ -52,7 +52,7 @@
                 <!-- Buttons -->
                 
                 <!-- Slides -->
-                <div x-show="activeSlide === 1"
+                <div data-aos="fade-up" data-aos-duration="100"  x-show="activeSlide === 1"
                     class="p-8 text-center rounded-lg relative flex flex-col items-center">
                     <div class="py-1 px-4 rounded-t-md border-blueth border-l-2 border-t-2 border-r-2 border-b-transparent text-3xl font-extrabold  text-blueth">1</div>
                     <div class="flex flex-col space-y-4 bg-blueth rounded-3xl p-8 text-white">
@@ -61,7 +61,7 @@
                     </div>
                 </div>
 
-                <div x-show="activeSlide === 2"
+                <div data-aos="fade-up" data-aos-duration="200"  x-show="activeSlide === 2"
                     class="p-8 text-center rounded-lg relative flex flex-col items-center">
                     <div class="py-1 px-4 rounded-t-md border-blueth border-l-2 border-t-2 border-r-2 border-b-transparent text-3xl font-extrabold  text-blueth">2</div>
                     <div class="flex flex-col space-y-4 bg-blueth rounded-3xl p-8 text-white">
@@ -70,7 +70,7 @@
                     </div>
                 </div>
 
-                <div x-show="activeSlide === 3"
+                <div data-aos="fade-up" data-aos-duration="300"  x-show="activeSlide === 3"
                     class="p-8 text-center rounded-lg relative flex flex-col items-center">
                     <div class="py-1 px-4 rounded-t-md border-blueth border-l-2 border-t-2 border-r-2 border-b-transparent text-3xl font-extrabold  text-blueth">3</div>
                     <div class="flex flex-col space-y-4 bg-blueth rounded-3xl p-8 text-white">
@@ -79,7 +79,7 @@
                     </div>
                 </div>
 
-                <div x-show="activeSlide === 4"
+                <div data-aos="fade-up" data-aos-duration="400"  x-show="activeSlide === 4"
                     class="p-8 text-center rounded-lg relative flex flex-col items-center">
                     <div class="py-1 px-4 rounded-t-md border-blueth border-l-2 border-t-2 border-r-2 border-b-transparent text-3xl font-extrabold  text-blueth">4</div>
                     <div class="flex flex-col space-y-4 bg-blueth rounded-3xl p-8 text-white">
@@ -130,7 +130,7 @@
                 <!-- Buttons -->
                 
                 <!-- Slides -->
-                <div
+                <div  data-aos="fade-up" data-aos-duration="100"
                     class=" p-8 text-center rounded-lg relative flex flex-col items-center">
                     <div class="py-1 px-4 rounded-t-md border-blueth border-l-2 border-t-2 border-r-2 border-b-transparent text-3xl font-extrabold  text-blueth">1</div>
                     <div class="w-full h-72 flex flex-col space-y-4 bg-blueth rounded-3xl p-8 text-white">
@@ -139,7 +139,7 @@
                     </div>
                 </div>
 
-                <div
+                <div  data-aos="fade-up" data-aos-duration="300"
                     class=" p-8 text-center rounded-lg relative flex flex-col items-center">
                     <div class="py-1 px-4 rounded-t-md border-blueth border-l-2 border-t-2 border-r-2 border-b-transparent text-3xl font-extrabold  text-blueth">2</div>
                     <div class="w-full h-72 flex flex-col space-y-4 bg-blueth rounded-3xl p-8 text-white">
@@ -148,7 +148,7 @@
                     </div>
                 </div>
 
-                <div
+                <div  data-aos="fade-up" data-aos-duration="400"
                     class=" p-8 text-center rounded-lg relative flex flex-col items-center">
                     <div class="py-1 px-4 rounded-t-md border-blueth border-l-2 border-t-2 border-r-2 border-b-transparent text-3xl font-extrabold  text-blueth">3</div>
                     <div class="w-full h-72 flex flex-col space-y-4 bg-blueth rounded-3xl p-8 text-white">
@@ -157,7 +157,7 @@
                     </div>
                 </div>
 
-                <div
+                <div  data-aos="fade-up" data-aos-duration="600"
                     class=" p-8 text-center rounded-lg relative flex flex-col items-center">
                     <div class="py-1 px-4 rounded-t-md border-blueth border-l-2 border-t-2 border-r-2 border-b-transparent text-3xl font-extrabold  text-blueth">4</div>
                     <div class="w-full h-72 flex flex-col space-y-4 bg-blueth rounded-3xl p-8 text-white">
@@ -206,11 +206,11 @@
         <form action="{{url('enviar_email')}}" method="post" >
             @csrf
             <div class="my-10 grid grid-cols-1 md:grid-cols-3 ">
-                <div class="ml-3 mt-2 space-y col-span-1"><input placeholder="Nome Sobrenome" name="name" type="text" class=" w-full rounded-3xl"></div>
-                <div class="ml-3 mt-2 space-y col-span-1"><input placeholder="(DDD) 9 0000-0000" name="numero" type="tel" maxlength="15" onkeyup="handlePhone(event)" class="w-full rounded-3xl"></div>
-                <div class="ml-3 mt-2 space-y col-span-1"><input placeholder="exemplo@email.com" name="email" type="email" class="w-full rounded-3xl"></div>
+                <div  data-aos="fade-up" data-aos-duration="100" class="ml-3 mt-2 space-y col-span-1"><input placeholder="Nome Sobrenome" name="name" type="text" class=" w-full rounded-3xl"></div>
+                <div  data-aos="fade-up" data-aos-duration="300" class="ml-3 mt-2 space-y col-span-1"><input placeholder="(DDD) 9 0000-0000" name="numero" type="tel" maxlength="15" onkeyup="handlePhone(event)" class="w-full rounded-3xl"></div>
+                <div  data-aos="fade-up" data-aos-duration="500" class="ml-3 mt-2 space-y col-span-1"><input placeholder="exemplo@email.com" name="email" type="email" class="w-full rounded-3xl"></div>
             </div>
-            <div class="flex flex-col mt-2 items-center text-start space-y-4">
+            <div  data-aos="fade-up" data-aos-duration="500" class="flex flex-col mt-2 items-center text-start space-y-4">
                 <div class="bg-blueth rounded-3xl w-full">
                     <div class="rounded-3xl bg-white h-48 border-2 justify-end border-blueth">
                         <textarea name="content" id="ask-description" placeholder="Escreva aqui"
@@ -226,7 +226,7 @@
         </form>
     </section>
 
-    <section id="ask-here" class="space-y-2 mt-10 flex justify-center border-t border-t-[#929292] lg:max-w-7xl lg:mx-auto">
+    <section id="ask-here"  data-aos="fade-up" data-aos-duration="1000" class="space-y-2 mt-10 flex justify-center border-t border-t-[#929292] lg:max-w-7xl lg:mx-auto">
         <div class="my-10 ">
             <hr/>
             <div class="mt-8 p-2 grid grid-cols-2 rounded-3xl border-2 border-blueth space-y-8 items-center align-center">

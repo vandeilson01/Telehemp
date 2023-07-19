@@ -28,6 +28,14 @@
 
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     
@@ -48,72 +56,77 @@
         {{ $slot }}
     </div>
 
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
-    <script>
-
-
-            function boxTop(idBox) {
-                var boxOffset = $(idBox).offset();
-                return boxOffset.top;
-            }
-
-            $(document).scroll(function() {
-              
-              var documentTop = $(this).scrollTop();
-                
-                if (documentTop >  10) {
-                    $('#leading').addClass('top_text_ini');
-                } else {
-                    $('#leading').removeClass('top_text_ini');
-                }
-                
-                if (documentTop > boxTop('#leadingtwo') - 150) {
-                    $('#leadingtwo').addClass('left_text_ini');
-                } else {
-                    $('#leadingtwo').removeClass('left_text_ini');
-                }
-                
-                if (documentTop > boxTop('#roxo') - 120) {
-                    $('#roxo').addClass('animar');
-                } else {
-                    $('#roxo').removeClass('animar');
-                }	
-            });
-
-
-
-
-            // termos
-
-
-            const cookieBox = $(".wrapper"),
-            buttons = $(".button");
-
-          
-            
-        
-            buttons.on("click", function() {
-                cookieBox.remove();
-                alert('nsjd');
-
-                //if button has acceptBtn id
-                if (buttons.id == "acceptBtn") {
-                    //set cookies for 1 month. 60 = 1 min, 60 = 1 hours, 24 = 1 day, 30 = 30 days
-                    document.cookie = "cookieBy= codinglab; max-age=" + 60 * 60 * 24 * 30;
-                }
-            });
-            
-            
-            // $("load", executeCodes);
-    </script>
- 
     <x-terms/>
+
+    <a href="https://api.whatsapp.com/send/?phone=%2B55554598054742&text=Ol%C3%A1%21+gostaria+de+tirar+algumas+duvidas+sobre+o+servico++TeleHemp%2C+poderia+me+auxiliar%3F&type=phone_number&app_absent=0" class="float-wha" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+ 
+    <script> 
+
+        AOS.init({
+        duration: 1000
+        });
+
+        // AOS.init({
+        //    offset: 200,
+        //    duration: 600,
+        //    easing: 'ease-in-sine',
+        //    delay: 100,
+        //  });
+
+        
+        //Chama a função para verificar se inicialmente a Modal vai ser exibida ou não  
+        AceitaCookies();
+        
+        //Clica no botão p/ aceitar os Cookies então chama a função para setar a expiração e esconde a Modal 
+        $('.accepted-cookies').click(function() {
+            setCookie();
+            $('.message-cookies').addClass('removeone');
+        });
+        
+        //Seta uma expiração no document.cookie e manda "true" p/ criação do cookie 
+        function setCookie() {
+            var tempExp = 'Wed, 30 Nov 2035 08:50:17 GMT';
+            document.cookie = 'AceitaCookies=true;expires='+tempExp+';path=/';
+        }
+        
+        //Função que chama a outra função que cria o cookie e exibe a Modal se não existir cookie
+        function AceitaCookies() {
+            //Chama a função que cria cookie
+            var cookie = getCookie("AceitaCookies");
+        
+            //Exibe Modal
+            if(cookie == "true") {
+                $('.message-cookies').removeClass('addone');
+                $('.message-cookies').addClass('removeone');
+            } 
+        }
+
+        $('#acceptBtn').on('click', function(){
+            $('.message-cookies').removeClass('removeone');
+            $('.message-cookies').hide();
+            
+        });
+
+        $('#declineBtn').on('click', function(){
+            $('.message-cookies').removeClass('removeone');
+            $('.message-cookies').hide();
+        })
+        
+        //Pega o nome do cookie
+        function getCookie(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length == 2) return parts.pop().split(";").shift();
+        }
+        
+    </script>
 
 </body>
 </html>

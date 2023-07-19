@@ -48,32 +48,40 @@ class EspecialistasController extends Controller
             'details' => $request->input('details'),
         ]);
 
-        if($add){
             $files = [];
+             
+
             if ($request->file('img')){
                 $file = $request->file('img');
-                $fileName = time().rand(1,99).'.'.$file->extension();  
-                Storage::disk('local')->put('especialista/img/'.$fileName, 'Files');
+    
+                $fileName = $file->hashName(); 
+    
+                Storage::disk('do')->put('especialistas/img/'.$fileName, file_get_contents($file), 'public');
+    
+                 
                 $files[]['name'] = $fileName;
-
+    
                 Especialistas::where('id', $add->id)->update([
                     'img' => $fileName,
                 ]);
             }
 
             $filestwo = [];
+           
             if ($request->file('icon')){
                 $file = $request->file('icon');
-                $fileName = time().rand(1,99).'.'.$file->extension();  
+    
+                $fileName = $file->hashName(); 
                 
-                Storage::disk('local')->put('especialista/icon'.$fileName, 'Files');
+    
+                Storage::disk('do')->put('especialistas/icon/'.$fileName, file_get_contents($file), 'public');
+                 
                 $filestwo[]['name'] = $fileName;
-
+    
                 Especialistas::where('id', $add->id)->update([
                     'icon' => $fileName,
                 ]);
             }
-        }
         
         return redirect('/especialist');
 
@@ -113,24 +121,34 @@ class EspecialistasController extends Controller
         ]);
 
             $files = [];
+              
             if ($request->file('img')){
                 $file = $request->file('img');
-                $fileName = time().rand(1,99).'.'.$file->extension();  
-                Storage::disk('local')->put('especialista/img'.$fileName, 'Files');
+    
+                $fileName = $file->hashName(); 
+    
+                Storage::disk('do')->put('especialistas/img/'.$fileName, file_get_contents($file), 'public');
+    
+                 
                 $files[]['name'] = $fileName;
-
+    
                 Especialistas::where('id', $request->id)->update([
                     'img' => $fileName,
                 ]);
             }
 
             $filestwo = [];
+           
             if ($request->file('icon')){
                 $file = $request->file('icon');
-                $fileName = time().rand(1,99).'.'.$file->extension();  
-                Storage::disk('local')->put('especialista/icon'.$fileName, 'Files');
+    
+                $fileName = $file->hashName(); 
+                
+    
+                Storage::disk('do')->put('especialistas/icon/'.$fileName, file_get_contents($file), 'public');
+                 
                 $filestwo[]['name'] = $fileName;
-
+    
                 Especialistas::where('id', $request->id)->update([
                     'icon' => $fileName,
                 ]);

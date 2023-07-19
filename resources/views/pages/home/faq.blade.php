@@ -7,11 +7,11 @@
 
                 <div class="my-5">
 
-                    <h2 class="font-bold mx-5 p-5 text-9xl my-5 text-white">
+                    <h2 data-aos="fade-right" data-aos-duration="1000" class="font-bold mx-5 p-5 text-9xl my-5 text-white">
                         FAQ
                     </h2>
 
-                    <p class="text-white mx-5 p-5 my-2">
+                    <p  data-aos="fade-right" data-aos-duration="1500"  class="text-white mx-5 p-5 my-2">
                         Perguntas frequentes
                     </p>
                 </div>
@@ -28,11 +28,11 @@
     <section id="faqp" class="faqp mt-10  rounded-3xl section-bg text-blueth border-t border-blueth lg:max-w-7xl lg:mx-auto">
 		<div class="container ">
             <!--  -->
-            <x-th.faqs />
+            <x-th.faqs  />
         </div>
 	</section>
 
-    <section id="ask-here" class="space-y-2 mt-10 flex justify-center border-t border-t-[#929292] lg:max-w-7xl lg:mx-auto">
+    <section id="ask-here" data-aos="fade-up" data-aos-duration="1500"   class="space-y-2 mt-10 flex justify-center border-t border-t-[#929292] lg:max-w-7xl lg:mx-auto">
         <div class="my-10 ">
             <hr/>
             <div class="mt-8 p-3 pl-1 grid grid-cols-2 rounded-3xl border-2 border-blueth space-y-8 items-center align-center">

@@ -3,7 +3,7 @@
         <div id="header-background" class="w-full rounded-[36px] bg-gradient-to-br from-blueth via-blueth to-greenth p-8">
             @include('layouts.navigation-public')
 
-            <div id="leading" class=" flex flex-col mt-4 gap-4 text-white items-center text-center">
+            <div id="leading" data-aos="fade-down" class=" flex flex-col mt-4 gap-4 text-white items-center text-center">
                 <h1 class="font-thunder font-bold text-5xl lg:text-7xl">Sua ponte para a<br /> saúde canábica</h1>
                 <p class="text-xl lg:text-md">Para pacientes. Para médicos. Para <strong>todos.</strong></p>
                 <a href="https://wa.me/+55554598054742?text=Ol%C3%A1!%20Tenho%20interesse%20em%20fazer%20uma%20consulta%20pela%20TeleHemp,%20poderia%20me%20auxiliar?" target="_blank" class="bg-gray-300 rounded-xl shadow-md py-2 px-6 text-blueth font-bold z-50">Saiba mais</a>
@@ -13,7 +13,7 @@
         </div>
 
 {{--        scale-125 lg:scale-75 mt-[-9rem] lg:mt-[-25rem] lg:w-[870px]--}}
-        <img id="phone-call" class="lg:scale-75 mt-[-9rem] lg:mt-[-25rem] lg:w-[870px]" src="{{ asset('images/navigation-phone-large-crop.png') }}" alt="Header Phone Consult">
+        <img id="phone-call" class="lg:scale-75 mt-[-9rem] lg:mt-[-25rem] lg:w-[870px]" src="{{ asset('images/telemock.png') }}" alt="Header Phone Consult">
     </div>
 
     <section id="customers-avatar" class="hidden mt-8 flex flex-col items-center text-center justify-center gap-4">
@@ -41,16 +41,16 @@
                 </div>
 
                 <div class="lg:grid lg:grid-flow-col lg:gap-4">
-                    <p id="leadingtwo" class="lg:max-w-[496px] text-lg lg:font-thunder-light lg:text-4xl text-gray-700">Bem-vindo à TeleHemp, a primeira plataforma multidisciplinar de telessaúde canábica do Brasil! Somos um time apaixonado por inovação e comprometido com a saúde e bem-estar dos nossos usuários. Nossa missão é conectar pacientes a especialistas altamente qualificados no campo da cannabis medicinal, facilitando o acesso a tratamentos eficazes e seguros para diversas condições, como ansiedade, depressão, Alzheimer, epilepsias, entre outras.</p>
+                    <p id="leadingtwo" data-aos="fade-right" class="lg:max-w-[496px] text-lg lg:font-thunder-light lg:text-4xl text-gray-700">Bem-vindo à TeleHemp, a primeira plataforma multidisciplinar de telessaúde canábica do Brasil! Somos um time apaixonado por inovação e comprometido com a saúde e bem-estar dos nossos usuários. Nossa missão é conectar pacientes a especialistas altamente qualificados no campo da cannabis medicinal, facilitando o acesso a tratamentos eficazes e seguros para diversas condições, como ansiedade, depressão, Alzheimer, epilepsias, entre outras.</p>
                     <img src="{{ asset('images/telehemp-canabis-leaf-desktop.png') }}" alt="Canabis Leaf" class="hidden lg:flex bg-[#E5E5E5] lg:w-auto">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="funcionalidades" class="lg:max-w-7xl lg:mx-auto lg:gap-8 mt-8 flex flex-col lg:grid lg:grid-flow-col lg:auto-cols-auto items-center text-center lg:text-left">
-        <x-th.h2-gradient class="hidden">Como podemos te ajudar?</x-th.h2-gradient>
-        <x-th.h2-gradient class="lg:block">Como<br /> podemos<br /> te ajudar?</x-th.h2-gradient>
+    <section id="funcionalidades" data-aos="fade-up" class="lg:max-w-7xl lg:mx-auto lg:gap-8 mt-8 flex flex-col lg:grid lg:grid-flow-col lg:auto-cols-auto items-center text-center lg:text-left">
+        <x-th.h2-gradient data-aos="fade-up" class="hidden">Como podemos te ajudar?</x-th.h2-gradient>
+        <x-th.h2-gradient data-aos="fade-up" class="lg:block">Como<br /> podemos<br /> te ajudar?</x-th.h2-gradient>
 
         <div class="w-screen px-8 lg:max-w-screen-md relative"
                  x-data="{ activeSlide: 1, slides: [1, 2] }" >
@@ -193,9 +193,9 @@
              x-data="{ activeSlide: 1, slides: [1, 2, 3, 4, 5] }">
         <h1 class="font-thunder font-medium text-white text-4xl lg:text-5xl text-center">Nossos especialistas<br class="lg:hidden" /> atendem pacientes com:</h1>
 
-        <div class="max-w-4xl mx-auto relative pb-8 lg:w-full" x-data="">
+        <div class="max-w-4xl mx-auto relative pb-8 lg:w-full" data-aos="fade-up" x-data="">
             <div class="lg:flex lg:flex-row lg:gap-2">
-                <div x-on:click="activeSlide = 1"
+                <div  x-on:click="activeSlide = 1"
                     x-show="activeSlide === 1"
                     class="lg:hidden font-bold flex items-center text-white rounded-lg relative cursor-pointer">
                     <div class="absolute h-full w-full rounded-xl bg-gradient-to-b from-transparent via-transparent to-greenth"></div>
@@ -297,7 +297,7 @@
             </div>
         </div>
 
-        <x-th.symptons-card
+        <x-th.symptons-card data-aos="fade-down"
             x-show="activeSlide === 1"
             title="Depressão"
             subtitle="Bem comum"
@@ -310,7 +310,7 @@
             </x-slot>
         </x-th.symptons-card>
 
-        <x-th.symptons-card
+        <x-th.symptons-card data-aos="fade-down"
             x-show="activeSlide === 2"
             title="Insônia"
             subtitle="Comum"
@@ -323,7 +323,7 @@
             </x-slot>
         </x-th.symptons-card>
 
-        <x-th.symptons-card
+        <x-th.symptons-card data-aos="fade-down"
             x-show="activeSlide === 3"
             title="Ansiedade"
             subtitle="Muito comum"
@@ -336,7 +336,7 @@
             </x-slot>
         </x-th.symptons-card>
 
-        <x-th.symptons-card
+        <x-th.symptons-card data-aos="fade-down"
             x-show="activeSlide === 4"
             title="Dor crônica"
             subtitle="Muito comum"
@@ -350,11 +350,11 @@
         </x-th.symptons-card>
     </section>
 
-    <section id="testimony" class=" lg:max-w-7xl lg:mx-auto mt-16 flex flex-col justify-center items-center py-8 px-4 space-y-8 lg:border-[1px] lg:border-blueth lg:rounded-3xl">
-        <x-th.h2-gradient>Conheça quem<br class="lg:hidden" />confia na TeleHemp</x-th.h2-gradient>
+    <section id="testimony"  data-aos="fade-up" class=" lg:max-w-7xl lg:mx-auto mt-16 flex flex-col justify-center items-center py-8 px-4 space-y-8 lg:border-[1px] lg:border-blueth lg:rounded-3xl">
+        <x-th.h2-gradient>Conheça quem <br class="lg:hidden" />confia na TeleHemp</x-th.h2-gradient>
 
         <!-- mobile slide -->
-        <div
+        <div 
             class="lg:hidden w-full mx-auto relative pb-8"
             x-data="{ activeSlide: 1, slides: [1, 2, 3] }"
         >
@@ -604,7 +604,7 @@
         </div>
     </section>
 
-    <div id="especialistas" class="mt-16 relative lg:grid lg:grid-cols-3 lg:max-w-7xl lg:mx-auto">
+    <div id="especialistas" data-aos="fade-up"  class="mt-16 relative lg:grid lg:grid-cols-3 lg:max-w-7xl lg:mx-auto">
         <section class="z-10 bg-[#E5E5E5] relative border-[1px] rounded-3xl border-blueth p-8 space-y-4 text-center lg:col-span-2 lg:flex lg:flex-col">
             <x-th.h2-blueth>Conheça os especialistas</x-th.h2-blueth>
 
