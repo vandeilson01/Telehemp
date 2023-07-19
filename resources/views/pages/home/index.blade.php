@@ -13,7 +13,7 @@
         </div>
 
 {{--        scale-125 lg:scale-75 mt-[-9rem] lg:mt-[-25rem] lg:w-[870px]--}}
-        <img id="phone-call" class="lg:scale-75 mt-[-9rem] lg:mt-[-25rem] lg:w-[870px]" src="{{ asset('images/telemock.png') }}" alt="Header Phone Consult">
+        <img data-aos="fade-down" id="phone-call" class="lg:scale-75 mt-[-9rem] lg:mt-[-25rem] lg:w-[870px]" src="{{ asset('images/telemock.png') }}" alt="Header Phone Consult">
     </div>
 
     <section id="customers-avatar" class="hidden mt-8 flex flex-col items-center text-center justify-center gap-4">
