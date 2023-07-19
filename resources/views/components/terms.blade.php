@@ -1,5 +1,5 @@
 
-<div class="wrapper  message-cookies">
+<div class="wrapper message-cookies">
     <header>
         <h2 class="text-2xl">Temos compromisso com a sua privacidade</h2>
     </header>
