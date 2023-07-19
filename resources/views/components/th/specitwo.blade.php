@@ -22,7 +22,7 @@
                 <h2 class="text-4xl overflow-hidden font-bold mb-4 overflow-hidden mt-4 text-blueth"><span class="pname">{{$row->name}}</span><br/><span class="sname">{{$row->surname}}</span></h2>
                 <p class="underline">{{$row->especialit}}</p>
                 <br/><br/>
-                <button class="rounded-[10px] bg-greenth p-1 border border-blueth text-blueth font-bold">Agende</button>
+                <a href="https://telehemp.vsaudeapp.com.br/schedule" class="rounded-[10px] bg-greenth p-1 border border-blueth text-blueth font-bold">Agende</a>
             </div>
         </div>
     @endforeach
